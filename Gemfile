@@ -33,9 +33,14 @@ gem 'jbuilder', '~> 2.5'
 # gem Rubocop
 gem 'rubocop', '>=0.1'
 gem 'rubocop-performance'
+
+#gemas para travis
 gem 'rspec'
 gem 'sass'
 gem 'scss-lint'
+
+#gemas para token
+gem 'devise_token_auth'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
