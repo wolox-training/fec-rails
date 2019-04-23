@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem Rubocop
 gem 'rubocop', '>=0.1'
 gem 'rubocop-performance'
+gem 'rspec'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
