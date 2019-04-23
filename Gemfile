@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'rubocop', '>=0.1'
 gem 'rubocop-performance'
 gem 'rspec'
+gem 'sass'
+gem 'scss-lint'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
