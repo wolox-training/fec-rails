@@ -24,10 +24,10 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: wbooks-api
+  database: 'wbooks-api'
   pool: 5
-  username: "wbooks-api"
-  password: "wbooks-api"
+  username: wbooks-api
+  password: wbooks-api
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -64,7 +64,7 @@ test:
   encoding: unicode
   database: wbooks-api
   pool: 5
-  username: "wbooks-api"
+  username: wbooks-api
   password: wbooks-api
 
 # As with config/secrets.yml, you never want to store sensitive information,
