@@ -19,7 +19,7 @@ services:
 before_install:
   - "echo '--colour' > ~/.rspec"
   - "echo 'gem: --no-document' > ~/.gemrc"
-  - gem install -v 2.0.1 bundler --no-rdoc --no-ri
+  #- gem install -v 2.0.1 bundler --no-rdoc --no-ri
   # Solves rainbow issue: https://github.com/sickill/rainbow/issues/48
   - gem update --system
 
