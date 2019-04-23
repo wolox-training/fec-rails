@@ -17,6 +17,7 @@ services:
   - redis-server
 
 before_install:
+  - gem install bundler
   - "echo '--colour' > ~/.rspec"
   - "echo 'gem: --no-document' > ~/.gemrc"
   #- gem install -v 2.0.1 bundler --no-rdoc --no-ri
