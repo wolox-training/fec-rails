@@ -6,7 +6,7 @@ class CreateBooks < ActiveRecord::Migration[5.1]
       t.string :image
       t.string :title
       t.string :editorial
-      t.sting :year
+      t.string :year
 
       t.timestamps
     end
