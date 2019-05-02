@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Book < ApplicationRecord
   validates :genre, :presence => true
   validates :author, :presence => true
