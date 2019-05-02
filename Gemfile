@@ -48,8 +48,6 @@ gem 'devise_token_auth'
 #Fake generator
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
-#Factory bot
-gem 'factory_bot'
 
 
 group :development, :test do
@@ -58,9 +56,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
-  gem 'database_cleaner'
-  gem 'rspec-rails', '~> 3.8'
-  gem 'factory_bot'
+
 end
 
 group :development do
