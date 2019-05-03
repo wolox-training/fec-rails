@@ -59,8 +59,9 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
-  gem 'rspec-rails', '~> 3.8'
-  gem 'factory_bot'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_bot_rails'
+
 end
 
 group :development do

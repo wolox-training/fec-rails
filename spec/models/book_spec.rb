@@ -1,3 +1,4 @@
+
 require 'rails_helper'
 
 describe Book do
@@ -10,4 +11,5 @@ describe Book do
   it { is_expected.to validate_presence_of(:title) }
   it { is_expected.to validate_presence_of(:editorial) }
   it { is_expected.to validate_presence_of(:year) }
+
 end
