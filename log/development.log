@@ -2506,3 +2506,30 @@ Unpermitted parameter: :session
 Completed 200 OK in 331ms (Views: 0.4ms | ActiveRecord: 48.1ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test2@wolox.com.ar"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "uid", "encrypted_password", "first_name", "last_name", "email", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", "2019-05-06 12:27:12.775514"], ["updated_at", "2019-05-06 12:27:12.775514"], ["uid", "test2@wolox.com.ar"], ["encrypted_password", "$2a$11$s618zsQZkGw4Xv1ULKlZbe7Q9WT99EK2NDLujslKZ0NPx2bPpORy6"], ["first_name", "Test"], ["last_name", "TestLastName"], ["email", "test2@wolox.com.ar"], ["tokens", "{}"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/auth/sign_in" for ::1 at 2019-05-06 09:28:01 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test2@wolox.com.ar", "password"=>"[FILTERED]", "session"=>{"email"=>"test2@wolox.com.ar", "password"=>"[FILTERED]"}}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test2@wolox.com.ar"], ["provider", "email"], ["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"onmAmB0t8pX8DGILjVBVCw\":{\"token\":\"$2a$10$WKKe7pst4898ks42YHTD.u23DuNcPfcECTgiA755opK9DNuAQZpti\",\"expiry\":1558355281}}"], ["updated_at", "2019-05-06 12:28:01.932792"], ["id", 3]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"onmAmB0t8pX8DGILjVBVCw\":{\"token\":\"$2a$10$Kbe7P8BDrSitEJkpecmrw.V41FOyYl3hgu6qL6AOaxgMWGQukYSKe\",\"expiry\":1558355281,\"last_token\":\"$2a$10$WKKe7pst4898ks42YHTD.u23DuNcPfcECTgiA755opK9DNuAQZpti\",\"updated_at\":\"2019-05-06T12:28:01.945Z\"}}"], ["updated_at", "2019-05-06 12:28:02.008304"], ["id", 3]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 303ms (Views: 0.3ms | ActiveRecord: 13.0ms)
+
+
