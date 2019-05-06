@@ -48,10 +48,6 @@ gem 'devise_token_auth'
 #Fake generator
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
-#Factory bot
-gem 'factory_bot'
-
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
