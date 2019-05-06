@@ -4,7 +4,6 @@ class User < ActiveRecord::Base
   extend Devise::Models
   validates :first_name, presence: true
   validates :last_name, presence: true
-  # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   # Include default devise modules. Others available are:

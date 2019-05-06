@@ -40,7 +40,6 @@ gem 'sass'
 gem 'scss-lint'
 
 #gemas para token
-gem 'haml'  
 gem 'rack-cors', :require => 'rack/cors'
 gem 'devise_token_auth'
 gem 'devise'
