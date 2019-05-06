@@ -2,4 +2,5 @@
 
 /log/*.log
 /log/*.keep
+log/
 tmp/
