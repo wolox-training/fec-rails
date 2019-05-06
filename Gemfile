@@ -59,6 +59,7 @@ group :development, :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
   gem 'rspec-rails', '~> 3.6'
   gem 'factory_bot_rails'
 

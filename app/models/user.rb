@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class User < ApplicationRecord
   extend Devise::Models
 
@@ -5,7 +7,7 @@ class User < ApplicationRecord
   validates :last_name, presence: true
 
   devise :database_authenticatable, :registerable,
-           :recoverable, :rememberable, :validatable
-    # Include default devise modules. Others available are:
+         :recoverable, :rememberable, :validatable
+  # Include default devise modules. Others available are:
   include DeviseTokenAuth::Concerns::User
 end
