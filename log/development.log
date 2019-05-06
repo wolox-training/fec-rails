@@ -2533,3 +2533,28 @@ Unpermitted parameter: :session
 Completed 200 OK in 303ms (Views: 0.3ms | ActiveRecord: 13.0ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test4@wolox.com.ar"], ["provider", "email"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "uid", "encrypted_password", "first_name", "last_name", "email", "tokens") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["created_at", "2019-05-06 12:45:43.355806"], ["updated_at", "2019-05-06 12:45:43.355806"], ["uid", "test4@wolox.com.ar"], ["encrypted_password", "$2a$11$wj6J9UZaHlftlhqEd1oXS.pAPb1LatjheabaUIROUnWHkzIy2dvSa"], ["first_name", "Test"], ["last_name", "TestLastName"], ["email", "test4@wolox.com.ar"], ["tokens", "{}"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/auth/sign_in" for ::1 at 2019-05-06 09:46:04 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DeviseTokenAuth::SessionsController#create as */*
+  Parameters: {"email"=>"test4@wolox.com.ar", "password"=>"[FILTERED]", "session"=>{"email"=>"test4@wolox.com.ar", "password"=>"[FILTERED]"}}
+HTTP Origin header (chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop) didn't match request.base_url (http://localhost:3000)
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."provider" = $2 LIMIT $3[0m  [["email", "test4@wolox.com.ar"], ["provider", "email"], ["LIMIT", 1]]
+Unpermitted parameter: :session
+Unpermitted parameter: :session
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"Deq2WWHEonS7TjnbEV0KHQ\":{\"token\":\"$2a$10$3A5Hq3rhn5LGVRx6Nj2Q5uS/gmjKiT2bLpO17JDa/i7NqDWz.VOjy\",\"expiry\":1558356364}}"], ["updated_at", "2019-05-06 12:46:04.976379"], ["id", 4]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[37mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2 FOR UPDATE[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "tokens" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["tokens", "{\"Deq2WWHEonS7TjnbEV0KHQ\":{\"token\":\"$2a$10$1Hjc7XF4T96BPzp0twNHw.BA5qbJquKWV1kOWaV94wYXdWl4eroUi\",\"expiry\":1558356364,\"last_token\":\"$2a$10$3A5Hq3rhn5LGVRx6Nj2Q5uS/gmjKiT2bLpO17JDa/i7NqDWz.VOjy\",\"updated_at\":\"2019-05-06T12:46:04.988Z\"}}"], ["updated_at", "2019-05-06 12:46:05.055311"], ["id", 4]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 309ms (Views: 0.4ms | ActiveRecord: 13.7ms)
+
+
