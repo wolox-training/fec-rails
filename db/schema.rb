@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190506183254) do
+ActiveRecord::Schema.define(version: 20190430212446) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,17 +24,6 @@ ActiveRecord::Schema.define(version: 20190506183254) do
     t.string "year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "rents", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "book_id"
-    t.date "startDate"
-    t.date "endDate"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_rents_on_book_id"
-    t.index ["user_id"], name: "index_rents_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
