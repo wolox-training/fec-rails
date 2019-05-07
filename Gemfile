@@ -43,11 +43,11 @@ gem 'scss-lint'
 gem 'devise_token_auth'
 gem 'devise'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 #Fake generator
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
