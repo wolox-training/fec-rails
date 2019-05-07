@@ -4,3 +4,4 @@
 /log/*.keep
 log/
 tmp/
+log/development.log
