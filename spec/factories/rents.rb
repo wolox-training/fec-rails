@@ -2,8 +2,8 @@
 
 FactoryBot.define do
   factory :rent do
-    user { '' }
-    book { '' }
+    association :user, factory: :user
+    association :book, factory: :book
     startDate { '2019-05-07' }
     endDate { '2019-05-07' }
   end
