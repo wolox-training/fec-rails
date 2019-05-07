@@ -12,7 +12,7 @@ FactoryBot.define do
     author { Faker::Book.author }
     image { Faker::File.file_name('foo/bar', 'baz', 'jpg') }
     editorial { Faker::Book.publisher }
-    year { Faker::Date.backward  }
+    year { Faker::Date.backward }
     title { Faker::Book.title }
   end
 end
