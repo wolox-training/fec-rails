@@ -279,6 +279,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
   database_cleaner
+  devise
   devise_token_auth
   factory_bot_rails
   faker!
