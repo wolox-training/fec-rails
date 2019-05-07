@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(version: 20190507152056) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "rents", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "book_id"
+    t.date "start_at"
+    t.date "end_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_rents_on_book_id"
+    t.index ["user_id"], name: "index_rents_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
