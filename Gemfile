@@ -46,6 +46,9 @@ gem 'devise'
 #Fake generator
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
+# Routes
+gem 'wor-paginate'
+gem 'active_model_serializers', '~> 0.10.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
