@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
 class Book < ApplicationRecord
-  validates :genre, presence: true
-  validates :author, presence: true
-  validates :image, presence: true
-  validates :title, presence: true
-  validates :editorial, presence: true
-  validates :year, presence: true
+  validates :genre, :author, :image, :title, :editorial, :year, presence: true
 end
