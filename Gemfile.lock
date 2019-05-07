@@ -216,7 +216,7 @@ GEM
     scss-lint (0.7.0)
       colorize
       sass
-    selenium-webdriver (3.142.0)
+    selenium-webdriver (3.142.1)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
     shoulda-matchers (3.1.3)
