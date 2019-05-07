@@ -3,8 +3,8 @@ class CreateRents < ActiveRecord::Migration[5.1]
     create_table :rents do |t|
       t.belongs_to :user
       t.belongs_to :book
-      t.date :startDate
-      t.date :endDate
+      t.date :start_at
+      t.date :end_at
 
       t.timestamps
     end

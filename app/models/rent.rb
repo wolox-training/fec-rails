@@ -3,5 +3,5 @@
 class Rent < ApplicationRecord
   belongs_to :user, inverse_of: false
   belongs_to :book, inverse_of: false
-  validates :user, :book, :startDate, :endDate, presence: true
+  validates :user, :book, :start_at, :end_at, presence: true
 end

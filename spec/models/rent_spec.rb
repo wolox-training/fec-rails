@@ -8,6 +8,6 @@ RSpec.describe Rent do
   it { is_expected.to be_valid }
   it { is_expected.to validate_presence_of(:user) }
   it { is_expected.to validate_presence_of(:book) }
-  it { is_expected.to validate_presence_of(:startDate) }
-  it { is_expected.to validate_presence_of(:endDate) }
+  it { is_expected.to validate_presence_of(:start_at) }
+  it { is_expected.to validate_presence_of(:end_at) }
 end
