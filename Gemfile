@@ -43,6 +43,9 @@ gem 'scss-lint'
 gem 'devise_token_auth'
 gem 'devise'
 
+#Fake generator
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
