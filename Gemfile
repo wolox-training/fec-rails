@@ -41,6 +41,7 @@ gem 'scss-lint'
 
 #gemas para token
 gem 'devise_token_auth'
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
