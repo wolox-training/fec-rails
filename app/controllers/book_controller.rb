@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
 class BookController < ApplicationController
-  #index
+  before_action :authenticate_member!
   def index
-    if current_user.user_signed_in?:
-      @book = Book.all
-    end
+    @book = Book.all
   end
   #show
   def show
