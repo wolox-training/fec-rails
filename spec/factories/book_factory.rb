@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'factory_bot'
-
 FactoryBot.define do
   factory :book do
     genre { Faker::Book.genre }
