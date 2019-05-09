@@ -8,4 +8,5 @@
 
 User.create(first_name: "fede", last_name: "cava",email:"test@wolox.com.ar", password:"1234567A", password_confirmation: "1234567A")
 User.create(email: 'test4@wolox.com.ar', password: '123123123', password_confirmation: '123123123', first_name: 'Test', last_name: 'TestLastName')
-Book.create(genre: "Fantacia", author: "JK", image: "Ruta", title: "Harry Potter", editorial: "Test", year: "2000")
+Book.create(genre: Faker::Book.genre, author: Faker::Book.author, image: Faker::File.file_name('foo/bar', 'baz', 'jpg'), editorial: Faker::Book.publisher, year: Faker::Date.backward.year.to_s, title: Faker::Book.title)
+Book.create(genre: Faker::Book.genre, author: Faker::Book.author, image: Faker::File.file_name('foo/bar', 'baz', 'jpg'), editorial: Faker::Book.publisher, year: Faker::Date.backward.year.to_s, title: Faker::Book.title)

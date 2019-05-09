@@ -3,14 +3,16 @@
 module Api
   module V1
     class BooksController < ApplicationController
-      #before_action :authenticate_user!
+      include Wor::Paginate
+      before_action :authenticate_user!
       def index
         @book = Book.all
+        render_paginated @book, each_serializer: BooksSerializer
       end
-      #show
-    #   def show
-    #     @book = Book.find[:id]
-    #   end
+      def show
+        @book = Book.find(params[:id])
+        render json: @book
+      end
      end
   end
 end
