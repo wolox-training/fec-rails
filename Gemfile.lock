@@ -185,7 +185,7 @@ GEM
     scss-lint (0.7.0)
       colorize
       sass
-    selenium-webdriver (3.142.0)
+    selenium-webdriver (3.142.1)
       childprocess (>= 0.5, < 2.0)
       rubyzip (~> 1.2, >= 1.2.2)
     spring (2.0.2)
@@ -228,6 +228,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 2.0.1)
   byebug
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
