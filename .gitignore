@@ -1,7 +1,5 @@
 # Don't track content of these folders
 
-/log/*.log
-/log/*.keep
 log/
 tmp/
 log/development.log

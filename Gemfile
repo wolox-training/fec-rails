@@ -43,6 +43,9 @@ gem 'scss-lint'
 gem 'devise_token_auth'
 gem 'devise'
 
+#Fake generator
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -52,6 +55,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.1'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_bot_rails'
 
 end
 
