@@ -11,5 +11,13 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe BooksHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "responds successfully" do
+      get :index
+      expect(response.status).to eq(200)
+  end
+
+  it "responds successfully" do
+    get :show(params[:id])
+    expect(response.status).to eq(200)
+  end
 end

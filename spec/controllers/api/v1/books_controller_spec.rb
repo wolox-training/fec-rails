@@ -14,7 +14,7 @@ RSpec.describe Api::V1::BooksController, type: :controller do
       end
 
       it 'responses with books json' do
-        expected = ActiveModel::Serializer::CollectionSerializer.new(books, each_serializer: BookSerializer).to_json
+        expected = ActiveModel::Serializer::CollectionSerializer.new(books, serializer: BooksSerializer).to_json
         expect(response_body.to_json) =~ JSON.parse(expected)
       end
     end
@@ -29,7 +29,7 @@ RSpec.describe Api::V1::BooksController, type: :controller do
       end
 
       it 'Responses with the book associated with the id as a JSON' do
-        expect(response_body.to_json).to_eq BookSerializer.new(books, root: false).to_json
+        expect(response_body.to_json).to_eq BooksSerializer.new(books, root: false).to_json
       end
     end
   end
