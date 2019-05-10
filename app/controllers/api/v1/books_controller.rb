@@ -6,13 +6,11 @@ module Api
       include Wor::Paginate
       before_action :authenticate_user!
       def index
-        @book = Book.all
-        render_paginated @book, each_serializer: BooksSerializer
+        render_paginated Book.all
       end
-      
+
       def show
-        @book = Book.find(params[:id])
-        render json: @book
+        render_paginated json: Book.find(params[:id])
       end
      end
   end

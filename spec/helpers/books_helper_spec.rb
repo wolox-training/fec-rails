@@ -17,7 +17,7 @@ RSpec.describe BooksHelper, type: :helper do
   end
 
   it "responds successfully" do
-    get :show(params[:id])
+    get :show, params: {book_id: book.id}
     expect(response.status).to eq(200)
   end
 end
