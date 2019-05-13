@@ -15,3 +15,17 @@ describe Api::V1::BooksController, type: :controller do
     end
   end
 end
+ describe 'GET BooksController#index' do
+   include_context 'Authenticated User'
+   context 'When fetching all the books' do
+     before do
+       get :index
+     end
+
+    it 'responses with the users books json' do
+      expected = ActiveModel::Serializer::CollectionSerializer.new(
+      books, serializer: BookSerializer).to_json
+      expect(response_body.to_json) =~ JSON.parse(expected)
+    end
+  end
+end

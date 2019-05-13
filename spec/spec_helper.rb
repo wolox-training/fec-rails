@@ -74,3 +74,14 @@ Shoulda::Matchers.configure do |config|
     with.library :active_model
   end
 end
+
+RSpec.shared_context "Authenticated User", :shared_context => :metadata do
+  before { @user = :user }
+  def sign_in
+    m = create(:user)
+    @request.env["devise.mapping"] = Devise.mappings[:user]
+    @request.headers.merge! m.create_new_auth_token
+    sign_in m
+  end
+  let(:shared_let) { {'arbitrary' => 'object'} }
+end

@@ -7,7 +7,7 @@ module Api
       before_action :authenticate_user!
       def index
         @book = Book.all
-        render_paginated @book, each_serializer: BooksSerializer
+        render_paginated @book, each_serializer: BookSerializer
       end
       def show
         @book = Book.find(params[:id])
