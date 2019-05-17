@@ -37,7 +37,6 @@ describe Api::V1::BooksController, type: :controller do
         expected = ActiveModel::Serializer::CollectionSerializer.new(book, each_serializer: BookSerializer).to_json
         expect(response.body.to_json) =~ JSON.parse(expected)
       end
-
     end
   end
 end
