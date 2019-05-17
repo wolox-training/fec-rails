@@ -73,5 +73,3 @@ Shoulda::Matchers.configure do |config|
     with.library :active_model
   end
 end
-RSpec.shared_context "Authenticated User", :shared_context => :metadata do
-end
