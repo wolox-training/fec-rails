@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     end
   end
   mount_devise_token_auth_for 'User', at: '/auth'
-  get '/': root 'welcome#index'
+  get 'home/index'
 end
