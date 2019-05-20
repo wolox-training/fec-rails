@@ -6,6 +6,7 @@ module Api
       include Wor::Paginate
       before_action :authenticate_user!
       def index
+        byebug
         @book = Book.all
         render_paginated @book, each_serializer: BookSerializer
       end

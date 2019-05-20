@@ -7,13 +7,13 @@ describe Api::V1::BooksController, type: :controller do
     let!(:books) { create_list(:book, 3) }
     context 'When fetching all the books in the datebase with authenticate_user' do
       include_context 'Authenticated User'
-      subject(:http_request) do
+      subject(:index_request) do
         get :index
       end
 
       it 'responses with the users book json' do
         expected = ActiveModel::Serializer::CollectionSerializer.new(books, each_serializer: BookSerializer).to_json
-        expect(response.body.to_json) =~ expected
+        expect(index_request.body.to_json).to eq( expected )
       end
 
       it 'responds with 200 status' do
