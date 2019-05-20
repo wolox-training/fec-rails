@@ -3,17 +3,17 @@
 require 'rails_helper'
 
 describe Api::V1::BooksController, type: :controller do
+  include_context 'Authenticated User'
   describe 'GET #index' do
     let!(:books) { create_list(:book, 3) }
     context 'When fetching all the books in the datebase with authenticate_user' do
-      include_context 'Authenticated User'
-      subject(:index_request) do
+      subject(:http_request) do
         get :index
       end
 
       it 'responses with the users book json' do
         expected = ActiveModel::Serializer::CollectionSerializer.new(books, each_serializer: BookSerializer).to_json
-        expect(index_request.body.to_json).to eq( expected )
+        expect(http_request.body.to_json).to eq( expected )
       end
 
       it 'responds with 200 status' do
