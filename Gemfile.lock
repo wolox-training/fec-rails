@@ -275,6 +275,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 2.0.1)
   byebug
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
