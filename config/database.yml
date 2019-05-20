@@ -88,6 +88,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
   database: dadimm3p8dtdhr
   username: ttuenhgjczzrmt
   Port: 5432
