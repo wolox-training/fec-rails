@@ -285,6 +285,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
+  bundler (~> 2.0.1)
   byebug
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
