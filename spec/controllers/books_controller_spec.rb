@@ -13,7 +13,7 @@ describe Api::V1::BooksController, type: :controller do
 
       it 'responses with the users book json' do
         expected = ActiveModel::Serializer::CollectionSerializer.new(books, each_serializer: BookSerializer).to_json
-        expect(response.body.to_json) =~ JSON.parse(expected)
+        expect(response.body.to_json) =~ expected
       end
 
       it 'responds with 200 status' do
