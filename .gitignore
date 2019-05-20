@@ -4,3 +4,4 @@ log/
 tmp/
 log/development.log
 .DS_Storessß
+.byebug_history
