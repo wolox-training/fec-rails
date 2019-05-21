@@ -2,7 +2,8 @@
 
 require 'rails_helper'
 
-RSpec.describe RentsController, type: :controller do
+RSpec.describe Api::V1::RentsController, type: :controller do
+  include_context 'Authenticated User'
   describe 'GET #create' do
     it 'returns http success' do
       get :create
