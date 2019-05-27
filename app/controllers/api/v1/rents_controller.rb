@@ -13,6 +13,7 @@ module Api
           book = Book.find_by id: params[:book_id]
           @rent = Rent.create(user: user, book: book, start_at: params[:start_at], end_at: params[:end_at])
           render json: @rent
+          MailSenderWorker.perform_async('new_rent')
         else
           render json: { status: 'error', code: 3000, message: 'Params missing.' }
         end
