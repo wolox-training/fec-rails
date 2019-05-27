@@ -24,7 +24,7 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: 'wbooks-api'
+  database: 'wbooks-api-dev'
   pool: 5
   username: wbooks-api
   password: wbooks-api
@@ -62,7 +62,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: wbooks-api
+  database: wbooks-api-test
   pool: 5
   username: wbooks-api
   password: wbooks-api
@@ -89,9 +89,3 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-  database: dadimm3p8dtdhr
-  username: ttuenhgjczzrmt
-  Port: 5432
-  password: f531d5d5d2437256fbff2009620a4b535f79d45192c84b30d46da6fc48d14e05
-  Host: ec2-54-83-36-37.compute-1.amazonaws.com
-  URI: postgres://ttuenhgjczzrmt:f531d5d5d2437256fbff2009620a4b535f79d45192c84b30d46da6fc48d14e05@ec2-54-83-36-37.compute-1.amazonaws.com:5432/dadimm3p8dtdhr
