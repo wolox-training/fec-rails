@@ -5,4 +5,4 @@ tmp/
 log/development.log
 .DS_Storessß
 .byebug_history
-config/secrets.yml.env
+config/secrets.env

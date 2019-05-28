@@ -1,4 +1,6 @@
 Rails.application.configure do
+  require 'dotenv'
+  Dotenv.load
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -56,12 +58,13 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  user_name: ENV['user_name'],
-  password: ENV['password'],
-  address: ENV['address'],
-  domain: ENV['domain'],
-  port: ENV['port'],
-  authentication: 'cram_md5'
-}
+    user_name: ENV['USER_NAME'],
+    password: ENV['PASSWORD'],
+    address: ENV['ADDRESS'],
+    domain: ENV['DOMAIN'],
+    port: ENV['PORT'],
+    authentication: :cram_md5
+  }
+  config.action_mailer.smtp_settings = config.action_mailer.smtp_settings.symbolize_keys
 
 end

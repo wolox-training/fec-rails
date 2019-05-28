@@ -4,16 +4,16 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Hi <%= @rent.user.name %></h1>
+    <h1>Hi <%= @user.first_name %></h1>
     <p>
       <tbody>
           <tr>
-            <td><%= 'You rent:' %></td>
-            <td><%= @rent.book.title %></td>
-            <td><%= @rent.book.author %></td>
-            <td><%= @rent.book.genre %></td>
-            <td><%= @rent.book.editorial %></td>
-            <td><%= @rent.book.year %></td>
+            <td><%= 'You rent:' %></td><br /
+            <td><%= @book.title %></td><br /
+            <td><%= @book.author %></td><br /
+            <td><%= @book.genre %></td><br /
+            <td><%= @book.editorial %></td><br /
+            <td><%= @book.year %></td><br /
           </tr>
       </tbody>
     </p>
