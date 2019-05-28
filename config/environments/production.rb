@@ -88,7 +88,7 @@ Rails.application.configure do
     port: ENV['PORT'],
     authentication: :cram_md5
   }
-  config.action_mailer.smtp_settings = config.action_mailer.smtp_settings.symbolize_keys
+  # config.action_mailer.smtp_settings = config.action_mailer.smtp_settings.symbolize_keys
 
   if ENV["RAILS_LOG_TO_STDOUT"].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
