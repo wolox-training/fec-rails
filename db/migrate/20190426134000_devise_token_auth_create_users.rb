@@ -37,6 +37,9 @@ class DeviseTokenAuthCreateUsers < ActiveRecord::Migration[5.1]
       t.integer :password
       t.integer :password_confirmation
 
+      ##User internaciolization
+      t.string :locale, :null => false, :default => "es"
+
       ## Tokens
       t.json :tokens
 

@@ -6,6 +6,7 @@ module Api
       include Wor::Paginate
       include DeviseTokenAuth::Concerns::SetUserByToken
       before_action :authenticate_user!
+      before_action :set_locale
       # rubocop:disable Metrics/AbcSize
       def create
         if params.key?(:book_id) && params.key?(:start_at) && params.key?(:end_at)
@@ -24,6 +25,10 @@ module Api
 
       def find_book(book_id)
         Book.find_by(id: book_id)
+      end
+
+      def set_locale
+        I18n.locale = current_user.locale
       end
     end
   end
