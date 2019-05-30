@@ -4,16 +4,16 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Hi <%= @user.first_name %></h1>
+    <h1><%= t('hello')%>  <%="#{@user.first_name}" %></h1>
     <p>
       <tbody>
           <tr>
-            <td><%= 'You rent:' %></td><br /
-            <td><%= @book.title %></td><br /
-            <td><%= @book.author %></td><br /
-            <td><%= @book.genre %></td><br /
-            <td><%= @book.editorial %></td><br /
-            <td><%= @book.year %></td><br /
+            <p><%= t('first_line') %></p>
+            <td><%= t('title') %>: <%="#{@book.title}" %></td><br /
+            <td><%= t('author') %>:<%="#{@book.author}" %></td><br /
+            <td><%= t('genre') %>: <%="#{@book.genre}" %></td><br /
+            <td><%= t('editorial') %>: <%="#{@book.editorial}" %></td><br /
+            <td><%= t('year') %>: <%="#{@book.year}" %></td><br /
           </tr>
       </tbody>
     </p>

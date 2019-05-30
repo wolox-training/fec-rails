@@ -28,7 +28,7 @@ module Api
       end
 
       def set_locale
-        I18n.locale = current_user.locale
+        I18n.locale = current_user['locale']
       end
     end
   end
