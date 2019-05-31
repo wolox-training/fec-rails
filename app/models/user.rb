@@ -9,5 +9,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :rents, dependent: :restrict_with_exception
+  has_many :book_suggestions
   include DeviseTokenAuth::Concerns::User
 end
