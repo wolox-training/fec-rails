@@ -28,7 +28,11 @@ module Api
       end
 
       def set_locale
-        I18n.locale = current_user['locale']
+        if user_signed_in?
+          I18n.locale = current_user['locale']
+        else
+          render json: { status: 'error', code: 401, message: ' You must log-in.' }
+        end
       end
     end
   end
