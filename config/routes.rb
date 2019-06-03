@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     namespace 'v1' do
       resources :books, only: [:show, :index]
       resources :rents, only: [:create, :index]
+      resources :booksuggestion, only: [:create]
     end
   end
 end
