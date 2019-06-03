@@ -25,7 +25,7 @@ module Api
       end
 
       def index
-        #redefine endpoint from previus commit (replace current_user with pundit scope)
+        # redefine endpoint from previus commit (replace current_user with pundit scope)
         render_paginated policy_scope(Rent)
       end
 
