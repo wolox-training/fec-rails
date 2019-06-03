@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 describe RSpec.describe BookSuggestion do
@@ -9,5 +11,4 @@ describe RSpec.describe BookSuggestion do
   it { is_expected.to validate_presence_of(:editorial) }
   it { is_expected.to validate_presence_of(:year) }
   it { is_expected.to validate_presence_of(:link) }
-
 end
