@@ -1,8 +1,10 @@
 # Don't track content of these folders
-
 log/
 tmp/
 log/development.log
+<<<<<<< HEAD
 .DS_Storessß
 .byebug_history
 config/secrets.env
+=======
+>>>>>>> Heroku-Deploy
