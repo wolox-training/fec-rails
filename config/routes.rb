@@ -5,5 +5,4 @@ Rails.application.routes.draw do
       resources :books, only: [:show, :index]
     end
   end
-  mount_devise_token_auth_for 'User', at: '/auth'
 end
