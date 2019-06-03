@@ -58,8 +58,6 @@ gem 'sidekiq'
 #secrets
 gem 'dotenv'
 gem 'dotenv-rails'
-
-#users
 gem 'pundit'
 
 group :development, :test do
