@@ -14,7 +14,7 @@ module Api
           @rent = Rent.create(user: user, book: book, start_at: params[:start_at], end_at: params[:end_at])
           render json: @rent
         else
-          render json: { status: 'error', code: 3000, message: 'Params missing.' }
+          render json: { status: 'error', code: 400, message: 'Params missing.' }
         end
       end
       # rubocop:enable Metrics/AbcSize
