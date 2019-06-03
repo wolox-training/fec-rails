@@ -10,11 +10,7 @@ module Api
       end
 
       def show
-<<<<<<< HEAD
-        render json: Book.find(params[:id])
-=======
         render Book.find(params[:id])
->>>>>>> Rent-endpoints
       end
     end
   end
