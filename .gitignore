@@ -1,1 +1,7 @@
 # Don't track content of these folders
+<<<<<<< HEAD
+=======
+log/
+tmp/
+log/development.log
+>>>>>>> RentModel
