@@ -7,13 +7,11 @@ module Api
       include DeviseTokenAuth::Concerns::SetUserByToken
       before_action :authenticate_user!
       def index
-        book = Book.all
-        render_paginated book, each_serializer: BookSerializer
+        render_paginated Book
       end
 
       def show
-        book = Book.find(params[:id])
-        render json: book
+        render json: Book.find(params[:id])
       end
     end
   end
