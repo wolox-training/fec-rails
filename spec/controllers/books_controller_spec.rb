@@ -7,12 +7,19 @@ describe Api::V1::BooksController, type: :controller do
   describe 'GET #index' do
     let!(:books) { create_list(:book, 2) }
     context 'When fetching all the books in the datebase with authenticate_user' do
-      subject(:http_request) do
+      before do
         get :index
       end
 
       it 'responds with 200 status' do
         expect(response).to have_http_status(:ok)
+      end
+
+      it 'response with json with books serialized with BookSerializer' do
+        expected = ActiveModel::Serializer::CollectionSerializer.new(
+          books, each_serializer: BookSerializer
+        ).to_json
+       expect(response_body['page'].as_json).to eq JSON.parse(expected)
       end
     end
   end
