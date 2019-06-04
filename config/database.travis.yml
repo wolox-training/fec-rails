@@ -87,7 +87,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: app_production
-  username: app
-  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+  HOST: ENV['HOST']
+  DATABASE: ENV['DATABASE']
+  USER: ENV['USER']
+  DB-PORT: ENV['DB-PORT']
+  DB-PASSWORD: ENV['DB-PASSWORD']
+  URI: ENV['URI']
+  HEROKU-CLI: ENV['HEROKU-CLI']
