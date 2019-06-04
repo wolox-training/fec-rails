@@ -1,4 +1,6 @@
 Documentation:
    Enabled: false
 LineLength:
-   Max: 99
+    Max: 120
+Metrics/BlockLength:
+  ExcludedMethods: ['describe']
