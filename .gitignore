@@ -5,3 +5,4 @@ log/development.log
 .DS_Storessß
 .byebug_history
 config/secrets.env
+.env
