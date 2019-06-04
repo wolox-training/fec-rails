@@ -24,7 +24,7 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: 'wbooks-api_dev'
+  database: 'wbooks-api-dev'
   pool: 5
   username: wbooks-api
   password: wbooks-api
@@ -62,7 +62,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: wbooks-api_test
+  database: wbooks-api-test
   pool: 5
   username: wbooks-api
   password: wbooks-api
