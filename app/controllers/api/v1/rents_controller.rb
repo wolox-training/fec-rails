@@ -5,6 +5,7 @@ module Api
     class RentsController < ApplicationController
       include Wor::Paginate
       include DeviseTokenAuth::Concerns::SetUserByToken
+      include Pundit
       before_action :authenticate_user!
       before_action :set_locale
       # rubocop:disable Metrics/AbcSize
@@ -24,7 +25,8 @@ module Api
       end
 
       def index
-        render_paginated current_user.rents, each_serializer: RentSerializer
+        # redefine endpoint from previus commit (replace current_user with pundit scope)
+        render_paginated policy_scope(Rent)
       end
 
       def find_book(book_id)
