@@ -1,0 +1,9 @@
+en:
+  subject: 'Rentaste un libro!'
+  title: 'Libro'
+  author: 'Autor'
+  genre: 'Genero'
+  year: 'Año'
+  editorial: 'Editorial'
+  first_line: 'Alquilaste:'
+  hello: 'Hola '

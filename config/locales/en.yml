@@ -30,4 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  subject: 'You made a rent!'
+  title: 'Book'
+  author: 'Author'
+  genre: 'Genre'
+  year: 'Year'
+  editorial: 'Editorial'
+  first_line: 'You rent:'
+  hello: 'hello '

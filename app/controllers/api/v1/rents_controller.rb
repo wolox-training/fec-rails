@@ -6,6 +6,7 @@ module Api
       include Wor::Paginate
       include DeviseTokenAuth::Concerns::SetUserByToken
       before_action :authenticate_user!
+      before_action :set_locale
       # rubocop:disable Metrics/AbcSize
       def create
         if !validated_params
@@ -28,6 +29,14 @@ module Api
 
       def find_book(book_id)
         Book.find_by(id: book_id)
+      end
+
+      def set_locale
+        if user_signed_in?
+          I18n.locale = current_user['locale']
+        else
+          render json: { status: 'error', code: 401, message: ' You must log-in.' }
+        end
       end
     end
   end
