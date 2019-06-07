@@ -4,7 +4,7 @@ require 'rails_helper'
 
 describe Api::V1::BooksuggestionsController, type: :controller do
   describe 'POST #create' do
-  context 'With the correct params' do
+    context 'With the correct params' do
       let!(:booksuggestion_params) { attributes_for(:book_suggestion) }
       before do
         post :create, params: { book_suggestion: booksuggestion_params }

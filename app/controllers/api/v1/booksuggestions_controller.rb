@@ -3,16 +3,14 @@
 module Api
   module V1
     class BooksuggestionsController < ApplicationController
-      # rubocop:disable Metrics/AbcSize
       def create
-          booksuggestion = BookSuggestion.new(suggestion_params)
-          if booksuggestion.save
-            render json: booksuggestion, status: :created
-          else
-            render json: { status: 'error', code: 400, message: 'Params missing.' }, status: :unprocessable_entity
-          end
+        booksuggestion = BookSuggestion.new(suggestion_params)
+        if booksuggestion.save
+          render json: booksuggestion, status: :created
+        else
+          render json: { status: 'error', code: 400, message: 'Params missing.' }, status: :unprocessable_entity
+        end
       end
-      # rubocop:enable Metrics/AbcSize
 
       private
 
