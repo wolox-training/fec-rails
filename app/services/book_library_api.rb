@@ -9,7 +9,7 @@ class BookLibraryApi
   end
 
   def book
-     @j_son
+    @j_son
   end
 
   def return_info_json(response_url, isbn)
@@ -17,7 +17,7 @@ class BookLibraryApi
       response_url_body = JSON.parse(response_url.body)["ISBN:#{isbn}"]
       format_book(response_url_body, isbn)
     else
-      {message: 'Not response from server'}
+      { message: 'Not response from server' }
     end
   end
 
