@@ -4,3 +4,5 @@ LineLength:
     Max: 140
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
+Metrics/AbcSize:
+  Max: 16

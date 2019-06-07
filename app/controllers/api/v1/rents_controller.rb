@@ -8,7 +8,6 @@ module Api
       include Pundit
       before_action :authenticate_user!
       before_action :set_locale
-      # rubocop:disable Metrics/AbcSize
       def create
         if !validated_params
           render json: { status: 'error', code: 400, message: 'Params missing.' }
@@ -18,7 +17,6 @@ module Api
           render json: rent if rent
         end
       end
-      # rubocop:enable Metrics/AbcSize
 
       def validated_params
         params.key?(:book_id) && params.key?(:start_at) && params.key?(:end_at)
