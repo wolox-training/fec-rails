@@ -15,8 +15,8 @@ module Api
 
       def find_book
         if request.headers['isbn']
-          book_request = BookLibraryApi.new(headers[:isbn])
-          render json: book_request
+          book_request = BookLibraryApi.new(request.headers['isbn'])
+          render json: book_request.book
         else
           render json: { status: 'error', code: 400, message: 'Params missing.' }, status: :bad_request
         end
